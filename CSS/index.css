@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    
+}
+.game-container{
+    position:relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    height: auto;
+    width: 800px;
+    background-color: beige;
+}
+.game-container > h2:first-child{
+    text-align: center;
+    margin:18px;
+}
+.cards{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+}
+.card{
+    border:2px solid black;
+    /* display: flex;
+    justify-content: space-around; */
+    height: 100px;
+    margin:10px;
+    border-radius: 5px;
+    width:  100px;
+}
