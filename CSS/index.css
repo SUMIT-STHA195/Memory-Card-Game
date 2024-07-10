@@ -29,6 +29,11 @@
     border-radius: 5px;
     width:  100px;
 }
+.card img{
+    width: 100px;
+    height:100px;
+    align-items: center;
+}
 .card:active{
     transform:scale(.97);/*click effect*/
 }
