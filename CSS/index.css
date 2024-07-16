@@ -67,7 +67,7 @@ body{
 #cards{
     margin-left: 25px;
 }
-.cards{
+#cards{
     display:grid;
     grid-template-columns: repeat(6,1fr);
 }

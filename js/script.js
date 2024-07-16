@@ -1,8 +1,8 @@
-var error=0;
-var currentPlayer = 1;
-var player1Score = 0;
-var player2Score = 0;
-var cardList= [
+let error=0;
+let currentPlayer = 1;
+let player1Score = 0;
+let player2Score = 0;
+let cardList= [
     "dog",
     "goku",
     "luffy",
@@ -16,12 +16,13 @@ var cardList= [
     "trump",
     "zoro"
 ]
-var cardSet;
-var board= [];
-var rows=4;
-var column=6;
-var card1Selected;
-var card2Selected;
+let cardSet;
+let board= [];
+let rows=4;
+let column=6;
+let card1Selected;
+let card2Selected;
+let winner;
 
 window.onload= function(){
     suffleCards();
@@ -104,13 +105,14 @@ function selectCard(){
     }
 }
 function checkGameEnd() {
-    if (player1Score + player2Score === cardList.length) {
-        let winner = player1Score > player2Score ? "Player 1" : "Player 2";
+    console.log(player1Score + player2Score )
+        if ((player1Score + player2Score) === cardList.length) {
+            winner = player1Score > player2Score ? "Winner is Player 1 !!!" : "Winner is Player 2 !!!";
         if (player1Score === player2Score) {
-            winner = "It's a tie";
+            winner = "It's a tie !!!";
         }
-        document.getElementById("winner").textContent="Winner is "+winner+" !!";
-        window.location.replace("./page/end-page.html")
+        localStorage.setItem("winner",winner);
+        window.location.href="/page/end-page.html";
         // alert("Game Over! " + winner + " wins!");
     }
 }
@@ -124,7 +126,7 @@ function update(){
     } else {
         // Cards match, current player scores
         if (currentPlayer === 1) {
-            player1Score++;
+            player1Score++;//for checking with the cardlist.length for ending the game
         } else {
             player2Score++;
         }
