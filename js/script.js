@@ -1,7 +1,7 @@
 let error=0;
 let currentPlayer = 1;
-let player1Score = 0;
-let player2Score = 0;
+let player1Score = 6;
+let player2Score = 6;
 let cardList= [
     "dog",
     "goku",
@@ -31,7 +31,7 @@ window.onload= function(){
 function suffleCards(){
     // adds the cards which makes pair
     cardSet= cardList.concat(cardList);
-    console.log(cardSet)
+    // console.log(cardSet)
     // suffling cards
     for(let i=0;i<cardSet.length;i++){
         let j= Math.floor(Math.random()*cardSet.length);//get random index
@@ -40,7 +40,7 @@ function suffleCards(){
         cardSet[i]=cardSet[j];
         cardSet[j]=temp;
     }
-    console.log(cardSet);
+    // console.log(cardSet);
 }
 function startGame(){
     for(let r=0;r<rows;r++){
@@ -112,7 +112,7 @@ function checkGameEnd() {
             winner = "It's a tie !!!";
         }
         localStorage.setItem("winner",winner);
-        window.location.replace("/page/end-page.html");
+        window.location.replace("../end-page.html");
         // alert("Game Over! " + winner + " wins!");
     }
 }
