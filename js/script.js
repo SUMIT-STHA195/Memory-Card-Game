@@ -1,7 +1,7 @@
 let error=0;
 let currentPlayer = 1;
-let player1Score = 6;
-let player2Score = 6;
+let player1Score = 0;
+let player2Score = 0;
 let cardList= [
     "dog",
     "goku",
@@ -112,7 +112,7 @@ function checkGameEnd() {
             winner = "It's a tie !!!";
         }
         localStorage.setItem("winner",winner);
-        window.location.href="../page/end-page.html";
+        window.location.replace("/page/end-page.html");
         // alert("Game Over! " + winner + " wins!");
     }
 }
