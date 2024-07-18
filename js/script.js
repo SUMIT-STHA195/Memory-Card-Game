@@ -112,7 +112,7 @@ function checkGameEnd() {
             winner = "It's a tie !!!";
         }
         localStorage.setItem("winner",winner);
-        window.location.replace("../end-page.html");
+        window.location.replace("end-page.html");
         // alert("Game Over! " + winner + " wins!");
     }
 }
