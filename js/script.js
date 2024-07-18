@@ -1,7 +1,7 @@
 let error=0;
 let currentPlayer = 1;
-let player1Score = 7;
-let player2Score = 5;
+let player1Score = 0;
+let player2Score = 0;
 let cardList= [
     "dog",
     "goku",
