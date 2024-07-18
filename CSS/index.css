@@ -5,6 +5,8 @@
 
 body {
     background-image: url(../image/background.webp);
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 
 .player-info {
@@ -78,6 +80,7 @@ body {
 #cards {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
 }
 
 .card {
@@ -137,7 +140,43 @@ body {
 .end-container a:hover {
     background-color: #764ba2;
 }
+@media(max-width:1024px) {
+    .game-container{
+        top:50%;
+    }
+    
+}
 
+@media (max-width:800px) {
+    #cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .game-container {
+        top: 60%;
+        width: 600px;
+    }
+
+    .card {
+        height: 80px;
+        width: 80px;
+    }
+
+    .card img {
+        width: 100px;
+        height: 100px;
+        align-items: center;
+    }
+
+    .player-info {
+        width: 75%;
+    }
+    .player-info p{
+        font-size: 10px;
+    }
+
+}
 @media (max-width:700px) {
     #cards {
         display: grid;
@@ -145,26 +184,13 @@ body {
     }
 
     .game-container {
-        position: relative;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: auto;
+        top: 45%;
         width: 400px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
 
     .card {
-        border: 2px solid black;
-        background-color: #725353;
-        /* display: flex;
-        justify-content: space-around; */
-        height: 40px;
-        margin: 5px;
-        border-radius: 5px;
-        width: 40px;
+        height: 50px;
+        width: 50px;
     }
 
     .card img {
@@ -174,35 +200,22 @@ body {
     }
 
     .player-info {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        width: 80%;
+        width: 70%;
+    }
+    .player-info p{
+        font-size: 10px;
     }
 
 }
 
 @media screen and (max-width: 480px) {
     .game-container {
-        position: relative;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: auto;
+        top: 40%;
         width: 350px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
 
     .card {
-        border: 2px solid black;
-        background-color: #725353;
-        /* display: flex;
-        justify-content: space-around; */
         height: 40px;
-        margin: 5px;
-        border-radius: 5px;
         width: 40px;
     }
 
@@ -213,9 +226,9 @@ body {
     }
 
     .player-info {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        width: 80%;
+        width: 65%;
+    }
+    .player-info p{
+        font-size: 10px;
     }
 }
