@@ -59,7 +59,7 @@ function startGame(){
         board.push(row); 
     }
     console.log(board); 
-    setTimeout(hideCard,1000);
+    setTimeout(hideCard,0);
     updatePlayerInfo();
 }
 function updatePlayerInfo() {
